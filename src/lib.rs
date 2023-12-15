@@ -1,5 +1,6 @@
 mod utils;
 
+use crate::utils::set_panic_hook;
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
@@ -9,5 +10,10 @@ extern "C" {
 
 #[wasm_bindgen]
 pub fn greet() {
-    alert("Hello, hello-wasm!");
+    alert("Hello, Nils!");
+}
+
+#[wasm_bindgen]
+pub fn init() {
+    set_panic_hook();
 }
