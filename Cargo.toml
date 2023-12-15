@@ -3,9 +3,9 @@ name = "WAVE"
 version = "0.1.0"
 authors = ["Nils Sohn <sohn.cloud@proton.me>"]
 edition = "2018"
-description:
-repository:
-license: MIT
+description = "Web Assembly Version E"
+repository =  "https://github.com/sohndotcloud/WAVE.git"
+license = "MIT License"
 
 [lib]
 crate-type = ["cdylib", "rlib"]
