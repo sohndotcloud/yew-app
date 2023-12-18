@@ -4,7 +4,8 @@
   "description": "Starter code for Yew/Rust development",
   "main": "",
   "scripts": {
-    "build": "cargo build && cargo update" 
+    "build": "cargo build && cargo update && trunk build",
+    "run":  "trunk serve --release"
   },
   "author": "Nils Sohn",
   "license": "MIT",
