@@ -1,7 +1,7 @@
 {
-  "name": "create-yew-template",
+  "name": "yew-app",
   "version": "0.1.0",
-  "description": "Boilerplate code for Web Assembly page integration with Node",
+  "description": "Starter code for Yew/Rust development",
   "main": "",
   "scripts": {
     "build": "cargo build && cargo update" 

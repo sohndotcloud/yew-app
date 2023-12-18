@@ -1,17 +1,28 @@
 [package]
-name = "create-wasm-template"
+name = "yew-app"
 authors = ["Nils Sohn <sohn.cloud@proton.me>"]
 version = "0.1.0"
-edition = "2018"
-description = "Boilerplate code for Web Assembly page integration with Node"
-repository =  "https://github.com/sohndotcloud/WAVE.git"
-license = "MIT "
-[lib]
-crate-type = ["cdylib", "rlib"]
+edition = "2021"
+description = " for Web Assembly page integration with Node"
+repository =  "https://github.com/sohndotcloud/create-yew-template.git"
+rust-version = "1.74.1"
+readme = "README.md"
+license-file = "LICENSE.txt"
 
+[[bin]]
+name = "project"
+path = "src/main.rs"
+
+[lib]
+name = "project"
+path = "src/lib.rs"
+
+# https://doc.rust-lang.org/cargo/reference/profiles.html#default-profiles
 [profile.release]
 opt-level = "s"
+codegen-units = 1
+strip = true
 
 [dependencies]
-libloading = "0.6.7"
+libloading = "0.8.1"
 yew = { git = "https://github.com/yewstack/yew/", features = ["csr"] }
