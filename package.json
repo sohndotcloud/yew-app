@@ -1,14 +1,10 @@
 {
-  "name": "create-wasm-template",
+  "name": "create-yew-template",
   "version": "0.1.0",
   "description": "Boilerplate code for Web Assembly page integration with Node",
-  "main": "index.node",
+  "main": "",
   "scripts": {
-    "build": "cargo-cp-artifact -nc index.node -- cargo build --message-format=json-render-diagnostics",
-    "build-debug": "npm run build --",
-    "build-release": "npm run build -- --release",
-    "install": "npm run build-release",
-    "test": "cargo test"
+    "build": "cargo build && cargo update" 
   },
   "author": "Nils Sohn",
   "license": "MIT",
@@ -17,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sohndotcloud/wasm-server.git"
+    "url": "git+https://github.com/sohndotcloud/create-yew-template.git"
   },
   "keywords": [
     "web",
@@ -25,9 +21,5 @@
     "rust",
     "neon",
     "node"
-  ],
-  "bugs": {
-    "url": "https://github.com/sohndotcloud/wasm-server/issues"
-  },
-  "homepage": "https://github.com/sohndotcloud/wasm-server#readme"
+  ]
 }

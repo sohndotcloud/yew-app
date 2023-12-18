@@ -1,7 +1,7 @@
 [package]
 name = "create-wasm-template"
-version = "0.1.0"
 authors = ["Nils Sohn <sohn.cloud@proton.me>"]
+version = "0.1.0"
 edition = "2018"
 description = "Boilerplate code for Web Assembly page integration with Node"
 repository =  "https://github.com/sohndotcloud/WAVE.git"
@@ -9,16 +9,9 @@ license = "MIT "
 [lib]
 crate-type = ["cdylib", "rlib"]
 
-[dependencies]
-wasm-bindgen = "0.2.84"
-
-[dependencies.neon]
-version = "0.10"
-default-features = false
-features = ["napi-9"]
-
-[dev-dependencies]
-wasm-bindgen-test = "0.3.34"
-
 [profile.release]
 opt-level = "s"
+
+[dependencies]
+libloading = "0.6.7"
+yew = { git = "https://github.com/yewstack/yew/", features = ["csr"] }
