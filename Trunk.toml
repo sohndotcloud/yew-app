@@ -1,0 +1,10 @@
+[serve]
+address = "127.0.0.1"
+port = 999
+open = true
+no_autoreload = false
+no_error_reporting = false
+ws_protocol = "ws"
+
+[clean]
+cargo = false
