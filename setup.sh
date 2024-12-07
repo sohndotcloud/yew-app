@@ -6,9 +6,10 @@ then
     echo "Rust compiler could not be found."
 
     while true; do
-    read -p "Do you want to install rust toolchain? (Y/n) " yn
+    read -e -i "Y" -p "Do you want to install rust toolchain? (Y/n) " yn
     case $yn in
             [yY] )  echo Running Rustup curl command;
+                    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
                     break;;
             [nN] )  
                     echo Exiting setup.;
