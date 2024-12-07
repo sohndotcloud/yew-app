@@ -16,7 +16,7 @@ It doesn't work without dependencies out of the box. Trunk is a WASM application
 `cargo install trunk wasm-bindgen-cli`
 
 
-It needs rustup to add the WASM target processor. 
+It needs rustup to add the WASM target processor. `wasm32-unknown-unknown` is used for browsers. 
 
 `rustup target add wasm32-unknown-unknown`
 
