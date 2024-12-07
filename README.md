@@ -12,15 +12,13 @@ WebAssembly takes speed to the web with the newest features developed by the Web
 It doesn't work without dependencies out of the box. Trunk is a WASM application bundler for Rust, and it can't work without wasm-bindgen-cli.
 
 *setup.sh runs the following commands*
+
 `cargo install trunk wasm-bindgen-cli`
 
 
 It needs rustup to add the WASM target processor. 
 
-```
-rustup target add wasm32-unknown-unknown
-
-```
+`rustup target add wasm32-unknown-unknown`
 
 After everything is installed, it's ready!
 
