@@ -24,4 +24,4 @@ fi
 cargo install trunk wasm-bindgen-cli
 rustup target add wasm32-unknown-unknown
 
-echo View the site with `trunk serve`
+echo View the site in dev mode with `trunk serve --open`
