@@ -13,9 +13,8 @@ license-file = "LICENSE.txt"
 name = "project"
 path = "src/main.rs"
 
-[lib]
-name = "project"
-path = "src/lib.rs"
+[features]
+console_error_panic_hook = []
 
 # https://doc.rust-lang.org/cargo/reference/profiles.html#default-profiles
 [profile.release]
