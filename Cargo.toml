@@ -4,13 +4,13 @@ authors = ["Nils Sohn <sohn.cloud@proton.me>"]
 version = "0.1.0"
 edition = "2021"
 description = " for Web Assembly page integration with Node"
-repository =  "https://github.com/sohndotcloud/create-yew-template.git"
+repository = "https://github.com/sohndotcloud/create-yew-template.git"
 rust-version = "1.74.1"
 readme = "README.md"
 license-file = "LICENSE.txt"
 
 [[bin]]
-name = "project"
+name = "yew-app"
 path = "src/main.rs"
 
 [features]

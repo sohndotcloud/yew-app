@@ -3,12 +3,17 @@ FROM rust:1-alpine3.18
 #https://github.com/rust-lang/docker-rust/issues/85
 ENV RUSTFLAGS="-C target-feature=-crt-static"
 
-WORKDIR /app
-COPY ./ /app
-# do a release build
-RUN cargo build --release
-RUN strip target/release/create-yew-template
+# # Add wasm target
+# RUN rustup target add wasm32-unknown-unknown
 
-COPY --from=0 /app/target/wasm32-unknown-unknown/debug/ .
+# # Install wasm-pack for testing
+# RUN curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
+
+# # Install trunk and wasm-bindgen-cli for bundling and running
+# RUN cargo install trunk wasm-bindgen-cli
+
+# do a release build
+RUN trunk build --release
+RUN strip /app/target/wasm32-unknown-unknown/release/yew-app.wasm
 
 ENTRYPOINT [ "/yew-app" ]
